@@ -19,6 +19,11 @@ This is my first full-fledged project, combining a React frontend with a Node.js
 * **Node.js & Express:** Creating API routes (GET/POST) and processing user data.
 * **Axios / Fetch:** Interaction between the frontend and backend.
 
+* ## Screenshot
+
+![Preview](images/preview.png)
+
+
 ## How to run the project locally:
 
 1. Clone the repository.
