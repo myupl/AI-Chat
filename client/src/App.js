@@ -2,6 +2,11 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function App() {
+  const userId =
+    localStorage.getItem("userId") ||
+    Math.random().toString(36).substring(2);
+
+  localStorage.setItem("userId", userId);
   const [message, setMessage] = useState("");
   const [chat, setChat] = useState([]);
   const [characters, setCharacters] = useState({});
@@ -54,6 +59,7 @@ function App() {
     const res = await axios.post("http://localhost:3001/chat", {
       message: userMsg,
       characterId: character,
+      userId: userId
     });
 
     setChat((prev) => [
